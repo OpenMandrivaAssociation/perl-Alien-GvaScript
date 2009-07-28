@@ -1,26 +1,24 @@
+%define upstream_name    Alien-GvaScript
+%define upstream_version 1.11
 
-%define realname   Alien-GvaScript
-%define version    1.11
-%define release    %mkrel 2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Gva extension to the prototype javascript framework
-Source:     http://www.cpan.org/modules/by-module/Alien/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(File::Copy)
 BuildRequires: perl(File::Path)
 BuildRequires: perl(Pod::POM)
 BuildRequires: perl(Pod::POM::View)
 BuildRequires: perl(Pod::POM::View::HTML)
 BuildRequires: perl(Test::More)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 GvaScript (pronounce "gee-vascript") is a javascript framework born in
@@ -44,7 +42,7 @@ who want to modify GvaScript sources and recreate a distribution
 package.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -65,4 +63,3 @@ rm -rf %buildroot
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
