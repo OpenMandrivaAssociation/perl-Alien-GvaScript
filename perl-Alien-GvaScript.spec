@@ -1,5 +1,5 @@
 %define upstream_name    Alien-GvaScript
-%define upstream_version 1.11
+%define upstream_version 1.18
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
