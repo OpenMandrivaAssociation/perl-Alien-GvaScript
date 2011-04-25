@@ -17,6 +17,7 @@ BuildRequires: perl(Pod::POM)
 BuildRequires: perl(Pod::POM::View)
 BuildRequires: perl(Pod::POM::View::HTML)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(Module::Build)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
