@@ -1,2 +1,4 @@
+removed_sources:
+  Alien-GvaScript-1.22.tar.gz: 91e4687bbcc397c85bb2e991df94850efa844c0f
 sources:
-  "Alien-GvaScript-1.22.tar.gz": 91e4687bbcc397c85bb2e991df94850efa844c0f
+  Alien-GvaScript-1.42.tar.gz: f1e276ca750ba4328802a1a386de708b04496814

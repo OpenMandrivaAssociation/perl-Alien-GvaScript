@@ -1,15 +1,15 @@
 %define upstream_name    Alien-GvaScript
-%define upstream_version 1.22
+%define upstream_version 1.42
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Version:    %perl_convert_version 1.42
+Release:    1
 
 Summary:    Gva extension to the prototype javascript framework
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Alien/Alien-GvaScript-1.42.tar.gz
 
 BuildRequires: perl(File::Copy)
 BuildRequires: perl(File::Path)
@@ -100,4 +100,5 @@ rm -rf %buildroot
 
 * Tue Mar 31 2009 jquelin 1.11-1mdv
 - initial mdv release
+
 
