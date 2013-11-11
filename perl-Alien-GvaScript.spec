@@ -1,15 +1,15 @@
 %define upstream_name    Alien-GvaScript
-%define upstream_version 1.42
+%define upstream_version 1.43
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 1.42
+Version:    %perl_convert_version %{upstream_version}
 Release:    1
 
 Summary:    Gva extension to the prototype javascript framework
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Alien/Alien-GvaScript-1.42.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Alien/Alien-GvaScript-%{upstream_version}.tar.gz
 
 BuildRequires: perl(File::Copy)
 BuildRequires: perl(File::Path)
@@ -19,7 +19,6 @@ BuildRequires: perl(Pod::POM::View::HTML)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Module::Build)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 GvaScript (pronounce "gee-vascript") is a javascript framework born in
@@ -53,14 +52,11 @@ package.
 ./Build test
 
 %install
-rm -rf %buildroot
 ./Build install --destdir %buildroot
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -100,5 +96,6 @@ rm -rf %buildroot
 
 * Tue Mar 31 2009 jquelin 1.11-1mdv
 - initial mdv release
+
 
 
