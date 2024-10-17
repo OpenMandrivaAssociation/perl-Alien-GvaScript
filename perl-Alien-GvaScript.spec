@@ -8,7 +8,7 @@ Release:    3
 Summary:    Gva extension to the prototype javascript framework
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Alien/Alien-GvaScript-%{upstream_version}.tar.gz
 
 BuildRequires: perl(File::Copy)
